@@ -1,5 +1,6 @@
 import '../sass/main.scss';
-require('webpack-jquery-ui');
+require('bootstrap-multiselect/dist/js/bootstrap-multiselect');
+require('webpack-jquery-ui/datepicker');
 
 function initCollapseTable() {
   $('.js-collapsedTable').on('click', function (e) {
@@ -9,7 +10,6 @@ function initCollapseTable() {
   });
 }
 function initDatepicker(){
-  console.log('init picker');
   $('.js-datepicker').datepicker();
 }
 
@@ -79,9 +79,10 @@ function fileInputChange(){
   });
 }
 $(window).on('load', function () {
+  initSelect();
  /* initCollapseTable();
 
-  initSelect();
+
   initPopup();
   addAddress();
   initMaskedInput();

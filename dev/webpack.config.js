@@ -13,7 +13,7 @@ const targetFolder = 'assets';
 var SpritesmithPlugin = require('webpack-spritesmith');
 module.exports = {
   entry: {
-    'js/vendor': './src/js/plugins/entry.js',
+   // 'js/vendor': './src/js/plugins/entry.js',
     'js/scripts': glob.sync('./src/js/*.js')
   },
   output: {

@@ -1,0 +1,24 @@
+.b-breadcrumb{
+  background-color: #111111;
+  padding: 10px 0;
+  &__list{
+    background-color: transparent;
+    border-radius: 0;
+  }
+  &__link{
+    color:  #efefd0;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: underline;
+    padding-right: 5px;
+    &:hover{
+      color:  #c7ede4;
+    }
+  }
+  &__item.active{
+    color:  #c7ede4;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+

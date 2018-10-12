@@ -1,0 +1,200 @@
+span.multiselect-native-select{
+  position:relative;
+  display: block;
+  width: 100%;
+  font-family: $font-family-sans-serif;
+  .btn-group{
+    width: 100%;
+    display: block;
+  }
+  .custom-control-indicator{
+    display: none;
+  }
+}
+
+span.multiselect-native-select select{
+  border :0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px -1px -1px -3px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  left: 50%;
+  top: 30px;
+}
+
+.btn-group.show>.multiselect.btn{
+
+}
+.jBox-content .multiselect-container{
+  max-height: 220px;
+}
+.multiselect-container {
+  position: absolute;
+  font-size: 20px;
+  list-style-type: none;
+  margin: 5px 0 0;
+  width: 100%;
+  box-shadow: 0 0 3px rgba(0,0,0,.4);
+  padding: 0 0 7px;
+  max-height: 300px;
+  overflow-y: auto;
+  min-width: 220px;
+  border-radius: 0;
+  .multiselect-filter{
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    .input-group {
+      margin: 0 0 5px;
+    }
+    .multiselect-clear-filter{
+      min-width: auto;
+      cursor: pointer;
+      padding: 0 15px;
+      margin-bottom: 0;
+      color: #292b2c;
+      border: 1px solid #e1e1e1;
+      background: #eceeef;
+    }
+  }
+
+
+  > li {
+    padding: 0;
+    //margin-bottom: 5px;
+    &:first-child:not(.multiselect-filter){
+      margin-top: 10px;
+    }
+    &:hover{
+      background: #f2f2f2;
+      a{
+        text-decoration: none;
+      }
+    }
+    .custom-checkbox{
+      width: 100%;
+      padding: 5px 0.95rem;
+      >.custom-control-indicator {
+        position: absolute !important;
+        left: 15px;
+        top: 6px;
+      }
+    }
+
+    a{
+      color: #000000;
+      width: 100%;
+    }
+    &.active li{
+      font-weight: 600;
+    }
+
+    > a.multiselect-all label {
+      color: #292b2c;
+    }
+
+    &.multiselect-group label {
+      margin: 0;
+      padding: 5px 20px 5px 20px;
+      height: 100%;
+      font-weight: bold;
+    }
+
+    &.multiselect-group-clickable label {
+      cursor: pointer;
+    }
+
+    > a {
+      padding: 0;
+
+      > label {
+        margin: 0;
+        height: 100%;
+        cursor: pointer;
+        font-weight: normal;
+        padding: 3px 20px 3px 20px;
+        display: inline-flex !important;
+        font-size: 20px;
+        line-height: 1.4;
+        font-family: 'Roboto', sans-serif;
+        &.radio, &.checkbox {
+          margin: 0;
+        }
+
+        > input[type="checkbox"] {
+          margin-bottom:5px;
+        }
+      }
+    }
+  }
+}
+
+.btn-group > .btn-group:nth-child(2) > .multiselect.btn {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.form-inline .multiselect-container{
+
+  label.checkbox, label.radio{
+    padding: 3px 20px 3px 20px;
+    justify-content: flex-start;
+  }
+
+  li a label{
+
+    &.checkbox input[type="checkbox"], &.radio input[type="radio"]{
+      margin-left: -20px;
+      margin-right: 0;
+    }
+  }
+}
+
+.multiselect.btn.dropdown-toggle{
+  background: #fff;
+  border-color: #d9d9d9;
+  display: flex;
+  padding: 0.95rem;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  border:  1px solid #000000;
+  box-sizing: border-box;
+  background-color:  #ffffff;
+  box-shadow: inset 2px 2px 6px 0px rgba(0,0,0,0.75);
+  border-radius: 0;
+  font-family: 'Roboto';
+  color:  #000000;
+  font-size: 20px;
+  padding: 10px 20px;
+  height: 50px;
+  font-family: 'Roboto';
+  width: 100%;
+  &:focus{
+    border-color: #222222;
+  }
+  &:after {
+
+  }
+  .multiselect-selected-text{
+    font-family: 'Roboto';
+    color:  #000000;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: none;
+    @include media-breakpoint-down(md){
+      font-size: 16px;
+    }
+  }
+}
+*[kcms-role="active-form"] .-state_active-form-element-invalid+.btn-group>.multiselect.btn{
+  //box-shadow: 0 0 0 1px rgba(204, 0, 13, 0.5);
+}
+.has-error select + .btn-group>.multiselect.btn{
+  //border-color: #dc7471;
+}
+

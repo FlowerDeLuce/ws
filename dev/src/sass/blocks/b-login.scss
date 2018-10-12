@@ -1,0 +1,181 @@
+.b-login{
+  background: url('../img/blocks/background/login.jpg');
+  background-size: cover;
+  background-position: left bottom;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  -webkit-appearance: none;
+  &__content{
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__container{
+    max-width: 1285px;
+    padding: 0;
+    margin: 0 auto;
+    @include media-breakpoint-down(lg){
+      width: 100%;
+      max-width: 100%;
+      padding: 0 30px;
+    }
+    @include media-breakpoint-down(sm){
+      padding: 0 15px;
+    }
+  }
+  &__form{
+    background-color:  rgba(61, 137, 219, 0.75);
+    width: 560px;
+    color: #fff;
+    padding: 30px;
+    @include media-breakpoint-down(lg){
+      margin: 0 0 0 auto;
+      width: 500px;
+    }
+    @include media-breakpoint-down(md){
+      margin: 0 auto;
+      width: 500px;
+    }
+    @include media-breakpoint-down(sm){
+      margin: 0 auto;
+      width: 100%;
+      max-width: 500px;
+      padding: 30px 15px;
+    }
+  }
+  &__formLogo{
+    height: 120px;
+    width: auto;
+    display: block;
+    margin: 0 auto 35px;
+  }
+  &__formBody{
+    border-bottom: 1px solid #acc2d5;
+    border-left: 1px solid #acc2d5;
+    border-right: 1px solid #acc2d5;
+    padding: 40px 40px 25px 40px;
+    position: relative;
+    @include media-breakpoint-down(sm){
+      padding: 50px 20px 20px 20px;
+    }
+  }
+  &__formHeader{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    overflow-x: hidden;
+  }
+  &__formTitle{
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    font-family: 'IBM Plex Sans';
+    color:  #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    &:before{
+      content: '';
+      height: 1px;
+      width: 40px;
+      background: #acc2d5;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      position: absolute;
+    }
+    &:after{
+      content: '';
+      height: 1px;
+      width: 40px;
+      background: #acc2d5;
+      right: 0;
+      top: 50%;
+      display: block;
+      transform: translateY(-50%);
+      position: absolute;
+    }
+    br{
+      display: none;
+    }
+    @include media-breakpoint-down(lg){
+      font-size: 18px;
+    }
+    @include media-breakpoint-down(sm){
+      font-size: 16px;
+      br{
+        display: block;
+      }
+    }
+
+  }
+  &__input{
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+    color:  #000;
+    font-size: 20px;
+    padding: 20px;
+    height: 60px;
+    &::-webkit-input-placeholder {
+      color: #000;
+      font-size: 20px;
+    }
+    &::-moz-placeholder {
+      color: #000;
+      font-size: 20px;
+    }
+    &:-ms-input-placeholder {
+      color: #000;
+      font-size: 20px;
+    }
+    &:-moz-placeholder {
+      color: #000;
+      font-size: 20px;
+    }
+  }
+  &__submitBtn{
+    font-family: 'IBM Plex Sans';
+    color:  #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  &__forgotLink{
+    color:  #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 0;
+    display: block;
+    &:hover{
+      color:  #ffffff;
+      text-decoration: none;
+    }
+  }
+  &__checkboxRow{
+    display: flex;
+    justify-content: space-around;
+    padding:  20px 25px 0;
+    @include media-breakpoint-down(lg){
+      padding:  20px 0 0;
+    }
+    @include media-breakpoint-down(sm){
+      display: block;
+    }
+  }
+  .b-radiobtn__label{
+    color:  #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+}
+

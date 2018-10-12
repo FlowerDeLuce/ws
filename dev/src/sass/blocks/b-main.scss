@@ -1,0 +1,113 @@
+.b-main{
+  &__page{
+    padding: 20px 0;
+  }
+  &__content{
+    background: #ffffff;
+    padding: 20px;
+  }
+  &__title{
+    font-family: 'IBM Plex Sans';
+    color:  #165fae;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    @include media-breakpoint-down(md){
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    @include media-breakpoint-down(sm){
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+  }
+  &__header{
+    padding-right: 21px;
+    @include media-breakpoint-down(md){
+      padding-right: 0;
+    }
+  }
+  &__subtitle{
+    font-family: 'IBM Plex Sans';
+    color:  #165fae;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    &.-red{
+      color:  #96302f !important;
+    }
+    &.-bold{
+      font-weight: 700;
+    }
+    &:hover, &:focus{
+      text-decoration: none;
+    }
+    @include media-breakpoint-down(md){
+      font-size: 18px;
+    }
+
+  }
+  &__btnsRow{
+    display: flex;
+    align-items: center;
+    .b-btn{
+      margin-right: 20px;
+    }
+    @include media-breakpoint-down(sm){
+      display: block;
+      .b-btn{
+        margin: 0 auto 20px;
+      }
+    }
+  }
+  &__chaptersList{
+    list-style-type: none;
+    padding-left: 20px;
+    li{
+      margin-bottom: 25px;
+      display: block;
+    }
+  }
+  &__chaptersLink{
+    font-family: 'IBM Plex Sans';
+    color: #165fae;
+    font-size: 22px;
+    font-weight: 400;
+    position: relative;
+    padding-right: 25px;
+    &:after{
+      content: '\f061';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      font-family: 'FontAwesome';
+      font-size: 14px;
+      color: #165fae;
+      transform: translateY(-50%);
+      display: none;
+    }
+    &:hover{
+      color: #0c55a4;
+      text-decoration: none;
+      &:after{
+        display: block;
+      }
+    }
+  }
+  &__confirmTitle{
+    font-size: 32px;
+    text-align: center;
+    color: #165fae;
+    line-height: 1.4;
+    margin-bottom: 30px;
+  }
+  &__advanced{
+
+  }
+}
+
+.hidden{
+  display: none;
+ }
+

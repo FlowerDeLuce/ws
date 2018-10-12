@@ -1,0 +1,39 @@
+.b-btn{
+  text-transform: uppercase;
+  transition: all 0.5s;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  line-height: 1.5;
+  font-family: "IBM Plex Sans";
+  &.-red{
+    background-color:  #96302f;
+    color: #fff;
+    &:hover{
+      background-color:  #86200f;
+      transition: all 0.5s;
+      color: #fff;
+    }
+  }
+  &.-tall{
+    height: 60px;
+  }
+  &.-w-240{
+    min-width: 240px;
+    display: block;
+  }
+  @include media-breakpoint-down(md){
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  @include media-breakpoint-down(sm){
+    display: flex;
+    font-size: 14px;
+    padding: 5px 15px;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+}
+

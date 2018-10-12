@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4f43d497-c90f-4b9f-bbb3-4b263e1918f5" name="dev" url="http://dev.ideus.biz">
+        <fileTransfer host="dev.ideus.biz" port="22122" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22122" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

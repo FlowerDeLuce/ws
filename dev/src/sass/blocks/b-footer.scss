@@ -1,0 +1,38 @@
+.b-footer{
+  padding: 30px 0;
+  background-color:  #111111;
+  .container{
+    position: static;
+  }
+  &__menu{
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    &Item{
+      display: inline-block;
+      margin-right: 40px;
+      @include media-breakpoint-down(md){
+        margin-right: 20px;
+      }
+    }
+    &Link{
+      font-family: 'Roboto';
+      color:  #ffffff;
+      font-size: 16px;
+      font-weight: 400;
+      &:hover{
+        text-decoration: none;
+        color: #c7ede4;
+      }
+    }
+  }
+}
+.b-copyright{
+  font-family: 'Roboto';
+  color:  #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  @include media-breakpoint-down(md){
+    margin-top: 20px;
+  }
+}

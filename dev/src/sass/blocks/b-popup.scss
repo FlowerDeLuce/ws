@@ -1,0 +1,85 @@
+.b-popup{
+  display: none;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color:  rgba(0, 0, 0, 0.75);
+  height: 100vh;
+  &__wrapper{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__window{
+    padding: 30px 20px;
+    background-color:  #ffffff;
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.3);
+    width: 700px;
+    max-width: calc(100% - 20px);
+    position: absolute;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include media-breakpoint-down(md){
+      top: 0;
+      transform: translate(-50%, 50px);
+    }
+    &.-confirm{
+      .b-popup__closeWrapper{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+      }
+    }
+  }
+  &__closeBtn{
+    width: 16px;
+    height: 16px;
+    position: relative;
+    &:after{
+      width: 22px;
+      height: 3px;
+      content: '';
+      display: block;
+      background-color:  #9c3030;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &:before{
+      width: 22px;
+      height: 3px;
+      content: '';
+      display: block;
+      background-color:  #9c3030;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+  }
+  @include media-breakpoint-down(md){
+
+  }
+  &__radiobtnRow{
+
+  }
+  .b-radiobtn__label{
+    display: block;
+    font-size: 18px;
+  }
+  .b-radiobtn__note{
+    font-size: 14px;
+  }
+}
+

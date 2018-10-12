@@ -1,0 +1,127 @@
+.b-guestRow{
+  margin-top: 20px;
+  &:first-child{
+    margin-top: 0;
+  }
+  &__col{
+    padding-left: 0;
+    .b-input__label{
+      padding-left: 0;
+    }
+    @include media-breakpoint-down(lg){
+      margin-bottom: 20px;
+      padding-left: 10px;
+    }
+  }
+  &__numberCol{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include media-breakpoint-down(md){
+      display: block;
+      padding-top: 0;
+    }
+  }
+  &__number{
+    color: #000;
+    font-size: 19px;
+    font-weight: 700;
+    @include media-breakpoint-down(md){
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+  &__btnsRow{
+    .b-btn{
+      margin-left: 20px;
+      &:first-child{
+        margin-left: 0;
+      }
+    }
+  }
+  .b-checkbox{
+    padding-top: 1px;
+  }
+}
+
+.b-searchItem{
+  font-size: 19px;
+  &__btn{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    &:after{
+      cursor: pointer;
+      content: 'Select Guest';
+      white-space: nowrap;
+      font-size: 18px;
+      font-weight: 700;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      line-height: 1;
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      color: #034ca0;
+    }
+    &:before{
+      content: '';
+      border: 1px solid rgba(3, 76, 160, 0.5);
+      border-radius: 3px;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: block;
+      cursor: pointer;
+    }
+  }
+  &__visit{
+    margin-top: 15px;
+  }
+}
+
+.b-searchItem__radioBtn{
+  margin-top: 20px;
+  height: 50px;
+  cursor: pointer;
+  >label{
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  input[type=checkbox]{
+    display: none;
+  }
+  input[type=checkbox]:checked + .b-searchItem__btn:after {
+    content: 'Record Selected';
+    cursor: pointer;
+    color: #fff;
+  }
+  input[type=checkbox]:checked + .b-searchItem__btn:before {
+    border: 1px solid rgba(3, 76, 160, 1);
+    cursor: pointer;
+    background: #034ca0;
+  }
+
+}
+
+.b-guestRow .b-searchItem__checkBox {
+  padding-top: 15px;
+}
+.b-searchItem__checkBox{
+  label{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #034ca0;
+    line-height: 22px;
+  }
+}

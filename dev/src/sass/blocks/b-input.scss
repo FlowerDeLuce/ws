@@ -1,0 +1,125 @@
+.b-input{
+  border:  1px solid #000000;
+  box-sizing: border-box;
+  background-color:  #ffffff;
+  box-shadow: inset 2px 2px 6px 0px rgba(0,0,0,0.75);
+  border-radius: 0;
+  font-family: 'Roboto';
+  color:  #000000;
+  font-size: 20px;
+  padding: 10px 20px;
+  height: 50px;
+  @media (max-width: 1400px){
+    font-size: 18px;
+  }
+  @include media-breakpoint-down(md){
+    font-size: 16px;
+  }
+  &.-small{
+    width: 90px;
+  }
+  &.-medium{
+    width: 200px;
+  }
+  &::-webkit-input-placeholder {
+    color: #000;
+    font-size: 20px;
+    @media (max-width: 1400px){
+      font-size: 15px;
+    }
+    @include media-breakpoint-down(md){
+      font-size: 16px;
+    }
+  }
+  &::-moz-placeholder {
+    color: #000;
+    font-size: 20px;
+    @media (max-width: 1400px){
+      font-size: 15px;
+    }
+    @include media-breakpoint-down(md){
+      font-size: 16px;
+    }
+  }
+  &:-ms-input-placeholder {
+    color: #000;
+    font-size: 20px;
+    @media (max-width: 1400px){
+      font-size: 15px;
+    }
+    @include media-breakpoint-down(md){
+      font-size: 16px;
+    }
+  }
+  &:-moz-placeholder {
+    color: #000;
+    font-size: 20px;
+    @media (max-width: 1400px){
+      font-size: 15px;
+    }
+    @include media-breakpoint-down(md){
+      font-size: 16px;
+    }
+  }
+  &__label{
+    color:  #000000;
+    font-size: 19px;
+    font-weight: 700;
+    padding: 0 10px;
+    line-height: 1.1;
+    @include media-breakpoint-down(lg){
+      font-size: 18px;
+    }
+    @include media-breakpoint-down(md){
+      font-size: 16px;
+      br{
+        display: none;
+      }
+    }
+    @include media-breakpoint-down(sm){
+      padding-bottom: 10px;
+    }
+  }
+  &.-datepicker{
+    background-image: url('../img/blocks/icons/Calendar.png');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) 50%;
+    @include media-breakpoint-down(md){
+      background-position: calc(100% - 10px) 50%;
+    }
+  }
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.-poundsWrapper{
+  position: relative;
+  &:after{
+    content: 'pounds';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    @include media-breakpoint-down(md){
+      font-size: 16px;
+    }
+  }
+}
+
+.-smallPaddingSelect{
+  .multiselect.btn.dropdown-toggle{
+    padding: 10px;
+  }
+  .multiselect-container{
+    min-width: auto;
+  }
+}
+.-smallPadding {
+  padding: 10px;
+}

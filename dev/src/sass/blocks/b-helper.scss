@@ -1,0 +1,37 @@
+.b-helper{
+  &__btn{
+    color: #165fae;
+    border-radius: 3px;
+    display: block;
+    border: 1px solid #a6c1d6;
+    margin-left: 10px;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    &:before{
+      font-family: 'custom';
+      font-style: normal;
+      font-weight: 400;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 22px;
+    }
+    &.-paper:before{
+      content: "\0042";
+    }
+    &.-copy:before{
+      content: "\0041";
+    }
+    &.-excel:before{
+      content: "\0046";
+    }
+    &:hover{
+      background: #165fae;
+      color: #fff;
+      transition: all .5s;
+    }
+  }
+}
+

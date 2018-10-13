@@ -42,7 +42,7 @@
  <script>window.Modernizr || document.write('<script src="assets/js/vendor/modernizr-2.8.3.min.js"><\/script>')</script>
  <script src="js_vendor/tether.min.js"></script>
  <script src="js_vendor/bootstrap.min.js"></script>
-<!--<script src="js_vendor/jquery-ui.min.js"></script>-->
+
 
 </head>
 <body class="l-body -page_<?php echo $uri; ?><?php echo (!$isHomepage) ? ' -page_inner' : ''; ?>">

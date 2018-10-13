@@ -1,6 +1,9 @@
 import '../sass/main.scss';
+var $ = jQuery = require('jquery');
 require('bootstrap-multiselect/dist/js/bootstrap-multiselect');
-require('webpack-jquery-ui/datepicker');
+require('jquery-ui-dist/jquery-ui.min');
+require('inputmask/dist/min/jquery.inputmask.bundle.min');
+
 
 function initCollapseTable() {
   $('.js-collapsedTable').on('click', function (e) {
@@ -80,9 +83,7 @@ function fileInputChange(){
 }
 $(window).on('load', function () {
   initSelect();
- /* initCollapseTable();
-
-
+  initCollapseTable();
   initPopup();
   addAddress();
   initMaskedInput();
@@ -90,6 +91,6 @@ $(window).on('load', function () {
   selectGuest();
   showArrivalRow();
   showDepartureRow();
-  fileInputChange();*/
+  fileInputChange();
   initDatepicker();
 });

@@ -19,7 +19,6 @@
     </div>
   </footer>
   </div><!--wrapper-->
-  <script src="assets/js/vendor.js?<?php echo filemtime('assets/js/vendor.js'); ?>"></script>
-  <script src="assets/js/scripts.js?<?php echo filemtime('assets/js/scripts.js'); ?>"></script>
+    <script src="assets/js/scripts.js?<?php echo filemtime('assets/js/scripts.js'); ?>"></script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 //https://hackernoon.com/a-tale-of-webpack-4-and-how-to-finally-configure-it-in-the-right-way-4e94c8e7e5c1
 //https://github.com/webpack-contrib/mini-css-extract-plugin/issues/37
 var glob = require("glob");
+var $ = jQuery = require('jquery');
 const webpack = require('webpack');
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -14,7 +15,6 @@ const targetFolder = 'assets';
 var SpritesmithPlugin = require('webpack-spritesmith');
 module.exports = {
   entry: {
-   // 'js/vendor': './src/js/plugins/entry.js',
     'js/scripts': glob.sync('./src/js/*.js')
   },
   output: {
@@ -48,11 +48,15 @@ module.exports = {
         modules: ["node_modules", "src"]
     },
   plugins: [
-    
+
   new CleanWebpackPlugin([targetFolder], {
         root: basePath + '/' + targetPath
       }),
-
+    new webpack.ProvidePlugin({
+      "window.jQuery": "jquery",
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
     new CopyWebpackPlugin([{
       from: 'src/',
       to: '../assets/',
